@@ -1,0 +1,420 @@
+/* Variables */
+/* mixins */
+/* default configuration */
+a {
+  color: #000;
+  transition: all 0.4s;
+}
+a:hover {
+  color: #18d26e !important;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+Utility Classes
+**/
+.active a {
+  color: #18d26e !important;
+}
+
+.bg-ucsmdy-transparent {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/**
+*
+* Navbar Classes
+*
+**/
+.col-md-4 {
+  margin-bottom: 10px;
+}
+
+#home nav.navbar {
+  transition: background-color 0.6s ease-out;
+}
+#home nav.navbar h1.ucsmdy-brand {
+  border-left: 4px solid #18d26e;
+}
+#home nav.navbar h1.ucsmdy-brand a.navbar-brand {
+  font-size: 30px !important;
+  padding-left: 8px;
+}
+#home nav.navbar #main-navbar ul.navbar-nav li.nav-item.dropdown .dropdown-menu li:hover {
+  background: none;
+}
+#home nav.navbar #main-navbar ul.navbar-nav li.nav-item.dropdown .dropdown-menu a {
+  color: #555;
+}
+#home nav.navbar #main-navbar ul.navbar-nav li.nav-item.dropdown .dropdown-menu a:hover {
+  text-decoration: none;
+  color: #18d26e;
+}
+#home nav.navbar #main-navbar ul.navbar-nav li a {
+  padding: 10px 8px 10px 8px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+#home nav.navbar #main-navbar ul.navbar-nav li a:hover {
+  color: #18d26e;
+}
+#home #intro {
+  width: 100%;
+  height: 100vh;
+}
+#home #intro:after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#home #intro .carousel-item {
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+#home #intro .carousel-item .carousel-caption {
+  position: absolute;
+  bottom: 10%;
+}
+#home #intro .carousel-item .carousel-caption h1 {
+  font-size: 3em !important;
+  font-weight: 900;
+}
+
+#about-us {
+  background: url("../Images/about-us-bg.jpg") center top no-repeat fixed;
+  background-size: cover;
+  position: relative;
+  padding: 60px 0 40px 0;
+}
+#about-us::before {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.92);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#about-us .container.history {
+  position: relative;
+}
+#about-us .container.history header h1 {
+  font-size: 32px;
+  color: #111;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  padding-bottom: 15px;
+  position: relative;
+  margin-bottom: 30px;
+}
+#about-us .container.history header h1::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 65px);
+  bottom: 1px;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+}
+#about-us .container.history header h1::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 25px);
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background: #18d26e;
+}
+#about-us .container.history p, #about-us .container.history li {
+  line-height: 2em;
+  text-indent: 20px;
+  letter-spacing: 1.2px;
+}
+#about-us .container.history p, #about-us .container.history h4, #about-us .container.history li {
+  color: #555;
+}
+#about-us .container.history p::first-letter {
+  font-size: 2em;
+  float: left;
+  margin-top: -3px;
+  margin-right: -18px;
+  margin-left: 5px;
+}
+#about-us .container.history ul li {
+  line-height: 2em;
+}
+
+#some-activities {
+  position: relative;
+  background: #f7f7f7;
+  padding: 60px 0 40px 0;
+  text-align: center;
+}
+#some-activities header h1 {
+  font-size: 32px;
+  color: #111;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  padding-bottom: 15px;
+  position: relative;
+  margin-bottom: 30px;
+}
+#some-activities header h1::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 65px);
+  bottom: 1px;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+}
+#some-activities header h1::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 25px);
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background: #18d26e;
+}
+#some-activities .card {
+  position: relative;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+  overflow: hidden;
+}
+#some-activities .card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  right: 100%;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.52);
+  z-index: 10;
+  visibility: hidden;
+  transition: all 0.4s ease-out;
+}
+#some-activities .card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+}
+#some-activities .card:hover .card-eye-icon {
+  visibility: visible;
+  top: 25%;
+  bottom: 30%;
+  left: calc(50% - 30px);
+}
+#some-activities .card:hover:after {
+  left: 0;
+  right: 0;
+  visibility: visible;
+}
+#some-activities .card .card-eye-icon {
+  position: absolute;
+  top: -100%;
+  visibility: hidden;
+  left: calc(50% - 30px);
+  z-index: 9999;
+  transition: all 0.4s ease-out;
+}
+#some-activities .card .card-eye-icon i {
+  font-size: 2em;
+  background: white;
+  padding: 10px;
+  color: black;
+  border-radius: 50%;
+}
+#some-activities .card img {
+  width: 100%;
+  height: 200px;
+}
+#some-activities .card .card-body h4 {
+  font-weight: 800;
+  font-size: 1.2em;
+}
+
+#useful-contents {
+  padding: 60px 0 40px 0;
+  background: url("../Images/useful-contents-bg.jpg") no-repeat center top fixed;
+  background-size: cover;
+  position: relative;
+  transition: all 0.4s;
+}
+#useful-contents:before {
+  content: "";
+  background: rgba(255, 255, 255, 0.92);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#useful-contents .container {
+  position: relative;
+}
+#useful-contents .container header {
+  margin-bottom: 30px;
+}
+#useful-contents .container header h1 {
+  font-size: 32px;
+  color: #111;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  padding-bottom: 15px;
+  position: relative;
+  margin-bottom: 30px;
+}
+#useful-contents .container header h1::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 65px);
+  bottom: 1px;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+}
+#useful-contents .container header h1::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 25px);
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background: #18d26e;
+}
+#useful-contents .container header p {
+  color: #333;
+  text-align: center;
+  font-size: 1.2em;
+}
+#useful-contents .container .card {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: all 0.4s;
+}
+#useful-contents .container .card img {
+  width: 100%;
+  height: 250px;
+}
+#useful-contents .container .card h2 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+#useful-contents .container .card p {
+  color: #333;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 0 20px 20px 20px;
+}
+#useful-contents .container .card p a {
+  text-decoration: underline;
+  display: block;
+  float: right;
+  margin-top: 20px;
+}
+#useful-contents .container .card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+#main-footer {
+  padding: 60px 0 0 0;
+  background: #111;
+  color: white;
+}
+#main-footer h5 {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+}
+#main-footer h5::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #18d26e;
+  width: 60px;
+  height: 2px;
+}
+#main-footer h5::before {
+  content: "";
+  position: absolute;
+  background: #555;
+  top: 100%;
+  right: 0;
+  height: 2px;
+  left: 0;
+}
+#main-footer p, #main-footer li, #main-footer a {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #eee;
+}
+#main-footer .social-media li {
+  list-style: none;
+  display: inline;
+  margin: 10px;
+}
+#main-footer .social-media li:hover i.twitter {
+  background: #0084b4;
+}
+#main-footer .social-media li:hover i.facebook {
+  background: #3b5998;
+}
+#main-footer .social-media li i {
+  font-size: 18px;
+  background: #333;
+  padding: 10px;
+  border-radius: 50%;
+}
+#main-footer .copyright {
+  background: #000;
+  padding: 30px 0 20px 0;
+  text-align: center;
+}
+#main-footer .copyright .fa-heart {
+  color: #8a0303;
+  animation: beat 0.25s infinite alternate;
+  transform-origin: center;
+  font-size: 1.1em;
+}
+
+/* animations */
+@keyframes beat {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.4);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
